@@ -84,9 +84,9 @@
 		<div class="login">
 		<h1>ADMIN LOGIN</h1>
 		<form>
-         <input type="text" placeholder=" Admin Login">	<br>
-         <input type="password" placeholder=" Password">
-         <input type="submit" value="Login" style="width:40%;color:white;background-color:tomato;border:none;">
+			<input type="text" placeholder=" Admin Login">	<br>
+			<input type="password" placeholder=" Password">
+			<input type="submit" value="Login" style="width:40%;color:white;background-color:tomato;border:none;">
          </form>
      </div>
 	</div>
