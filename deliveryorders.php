@@ -4,6 +4,9 @@ if(!isset($_POST['user2']))
 {
 	header('deliveryboylogin.php');
 }
+$query='select * from delivery';
+$result=mysqli_query($link,$query);
+$numberofboys=mysqli_num_rows ($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -249,7 +252,7 @@ if(!isset($_POST['user2']))
 			<td><?php echo $row1['name'];?></td>
 			<td><?php echo $row1['price'];?></td>
 			<td><?php echo $order[1];?></td>
-			<td><?php echo $row1['price'];?></td><form action="editdeliverys.php" method="POST">
+			<td><?php echo $row1['price']*$order[1];?></td><form action="editdeliverys.php" method="POST">
 			<td style="background-color: tomato;" rowspan="<?php echo $length?>"><label class="container"><input value="<?php echo $row['id'];?>" name="orders[[]" type="checkbox"><span class="checkmark"></span></label></td>
 
 		</tr>
@@ -266,7 +269,7 @@ if(!isset($_POST['user2']))
 			<td><?php echo $row1['name'];?></td>
 			<td><?php echo $row1['price'];?></td>
 			<td><?php echo $order[1];?></td>
-			<td><?php echo $row1['price'];?></td>
+			<td><?php echo $row1['price']*$order[1];?></td>
 		</tr>
 		<?php
 		}

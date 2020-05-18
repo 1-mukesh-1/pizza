@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2020 at 09:05 AM
+-- Generation Time: May 18, 2020 at 07:06 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -90,6 +90,14 @@ CREATE TABLE `history` (
   `status` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `history`
+--
+
+INSERT INTO `history` (`id`, `orderedby`, `finalorder`, `date`, `status`) VALUES
+(1, 'user1', '2:1,2:2,', '2020-05-18 22:11:42', 1),
+(2, 'user1', '2:1,2:3,', '2020-05-18 22:12:35', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -102,6 +110,13 @@ CREATE TABLE `orders` (
   `finalorder` varchar(300) NOT NULL,
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `orderedby`, `finalorder`, `date`) VALUES
+(2, 'user1', '2:1,2:3,', '2020-05-18 22:12:35');
 
 -- --------------------------------------------------------
 
@@ -209,7 +224,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `delivery`
@@ -227,7 +242,7 @@ ALTER TABLE `history`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pizza`
@@ -239,7 +254,7 @@ ALTER TABLE `pizza`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

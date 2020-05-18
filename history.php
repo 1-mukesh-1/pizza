@@ -103,11 +103,11 @@ require 'header.php';
                 $result1=mysqli_query($link,$query1);
                 $row1=mysqli_fetch_array($result1);
             ?>
-            <td><img src="<?php echo $row1['src']?>" alt="img not found" style="width:20%;"></td>
+            <td><img src="<?php echo $row1['src']?>"alt="img not found" style="width:20%;"></td>
             <td><?php echo $row1['name'];?></td>
             <td><?php echo $row1['price'];?></td>
             <td><?php echo $order[1];?></td>
-            <td><?php
+            <td rowspan="<?php echo $length?>"><?php
             if($row['status']==1)
             {
                 echo 'accepted';
@@ -135,7 +135,7 @@ require 'header.php';
             <td><?php echo $row1['name'];?></td>
             <td><?php echo $row1['price'];?></td>
             <td><?php echo $order[1];?></td>
-            <td><?php echo $row1['price'];?></td>
+
         </tr>
         <?php
         }
