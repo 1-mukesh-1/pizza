@@ -25,7 +25,6 @@ $_SESSION['page']="Cart";
             text-align: center;
             margin:auto;
             border-collapse: collapse;
-
         }
         .tab tr:nth-child(even)
         {
@@ -59,10 +58,7 @@ $_SESSION['page']="Cart";
             border:none;
             border-radius: 5px;
             padding:0.5rem;
-
         }
-
-
         @media screen and (max-width:850px)
         {
             .last button
@@ -76,7 +72,7 @@ $_SESSION['page']="Cart";
     <div class="tabcontainer">
         <?php
               if(isset($_SESSION['success']) && !empty($_SESSION['success'])){
-                echo "<div id='disappear' style='width:100%;'><p style='color:green;float: center;'>Added to cart</p></div>";
+                echo "<div id='disappear' style='width:100%;'>Payment successful</div>";
                  unset($_SESSION['success']);
                }
             ?>

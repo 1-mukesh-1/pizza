@@ -9,7 +9,7 @@ require 'header.php';
             echo "<div id='disappear' style='width:100%;'>Added to cart</div>";
              unset($_SESSION['success']);
            }
-		$query = "select * from pizza where type='v'";
+		$query = "select * from pizza where type='veg'";
 		$result = mysqli_query($link, $query);
 		while($row=mysqli_fetch_array($result))
 		{
@@ -19,7 +19,7 @@ require 'header.php';
 					<img style="width: 100%" src="<?php echo $row['src']?>" alt="img not found">
 					<h4><?php echo $row['name']?></h4>
 					<h4>Price : <?php echo $row['price']?></h4>
-					<input type="number" name="quantity"><br><br>
+					<input type="number" name="quantity" required><br><br>
 					<button type="submit" name="submit" value="<?php echo $row['id']?>">Add to cart</button><br><br>
 				</div>
 			</form>

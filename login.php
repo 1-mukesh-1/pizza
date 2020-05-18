@@ -20,7 +20,7 @@ if(isset($_POST['loginSubmit']))
 	else
         echo "<script>alert('invalid details')</script>";
     	$result=mysqli_query($link, $query);
-                           
+
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ if(isset($_POST['loginSubmit']))
 	<style>
 html
 {
-	
+
 }
 		body
 		{
@@ -40,7 +40,7 @@ html
 			box-sizing: border-box;
 			min-width:420px;
 			background-image:url('img\\pizzaback.jpg');
-			
+
 		}
 		.container
 		{
@@ -48,13 +48,11 @@ html
 		   display:flex;
 		   justify-content: center;
 		   align-items: center;
-
-
 		}
 		.login
 		{
 		 width:40%;
-         text-align:center; 
+         text-align:center;
          background-color: rgba(0, 0, 0, 0.5);
          color:white;
          border-radius: 50px;
@@ -76,7 +74,7 @@ html
 		.login form a
 		{
 			font-size:1.4rem;
-			
+
 			color:white;
 			text-decoration: none;
 			margin:1rem;
@@ -114,7 +112,7 @@ html
 		{
 			color:skyblue;
 			box-shadow: 0px 0px 15px 3px rgba(255,255,255,0.75);
-			
+
 		}
 		@media screen and (max-width:850px)
 		{
@@ -135,6 +133,7 @@ html
 			<input type="text" name="username" placeholder="USERNAME" required><br>
 			<input type="password" name="password" placeholder="PASSWORD" required><br>
 			<a href="registration.php">New User</a><br>
+			<a href="deliveryboylogin.php">Login for delivery employees</a><br>
 			<button type="submit" name="loginSubmit">Login</button>
 		</form>
 	</div>

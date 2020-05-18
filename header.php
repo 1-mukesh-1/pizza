@@ -148,6 +148,21 @@
             }
         }
     </style>
+    <script>
+    var x=document.querySelector('nav ul a:nth-child(5)');
+    var y=document.querySelectorAll('.dropdown');
+    function ok()
+    {
+         y[0].style.display="block";
+          y[1].style.display="block";
+    }
+    function notok()
+    {
+        y[0].style.display="none";
+          y[1].style.display="none";
+
+    }
+</script>
 </head>
 <body>
     <header>
@@ -163,6 +178,9 @@
                     <a href="beverages.php"><li>BEVERAGES</li></a>
                     <a href="pizzam.php"><li>PIZZA MANIA</li></a>
                     <a href="cart.php"><li>CART</li></a>
+                    <a href="#" onmouseover="setTimeout(ok,1000)" ONMOUSEOUT="setTimeout(notok,9000)"><li>DASHBOARD</li></a>
+                    <a href="history.php" class="dropdown">MyOrder History</a>
+                    <a href="#" class="dropdown">ChangePassword</a>
                 </ul>
             </nav>
         </div>

@@ -1,11 +1,4 @@
-<?php
-require 'db_config.php';
-if(isset($_SESSION['user']))
-{
-    echo $_SESSION['user'];
-    header('location:add.php');
-}
-?>
+
 <!DOCTYPE html>
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +11,7 @@ if(isset($_SESSION['user']))
 			box-sizing: border-box;
 			min-width:274px;
 			background-image: url('img/unnamed.jpg');
-			background-size: cover;
+			background-size: 100vw 100vh;
 		}
 		.head
 		{
@@ -53,7 +46,7 @@ if(isset($_SESSION['user']))
         	width:30%;
         	padding:2.5rem 1rem;
         	border-radius: 15px;
-        	background-color:rgba(255, 255, 255, 0.5);
+        	background-color:rgba(255, 255, 255, 0.8);
 
         }
         .login input
@@ -90,11 +83,11 @@ if(isset($_SESSION['user']))
 
 	<div class="container">
 		<div class="login">
-		<h1>ADMIN LOGIN</h1>
-		<form action="logincheck.php" method="post">
-			<input type="text" name="username" placeholder=" Admin Login" required>	<br>
-			<input type="password" name="password" placeholder=" Password" required>
-			<input type="submit" name="adminsubmit" value="Login" style="width:40%;color:white;background-color:tomato;border:none;">
+		<h1>Delivery Boy Login</h1>
+		<form action="logincheck.php" method="POST">
+         <input type="text" name="username" placeholder=" Username" required>	<br>
+         <input type="password" name="password" placeholder=" Password" required>
+         <input type="submit" name="deliverysubmit" value="Login" style="width:40%;color:white;background-color:tomato;border:none;">
          </form>
      </div>
 	</div>

@@ -10,15 +10,15 @@ if(isset($_POST['submit']))
     $query = "insert into cart values('$id','$user','$pizzaid','$quantity','$date')";
     $result = mysqli_query($link, $query);
     $_SESSION['success']="added";
-    if($_SESSION['page']=="veg")
+    if($_SESSION['page']=="Veg Pizza")
     {
         header('location:veg.php');
     }
-    else if($_SESSION['page']=="nonveg")
+    else if($_SESSION['page']=="Nonveg Pizza")
     {
         header('location:nonveg.php');
     }
-    else if($_SESSION['page']=="beverages")
+    else if($_SESSION['page']=="Beverages")
     {
         header('location:beverages.php');
     }
